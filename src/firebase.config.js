@@ -12,5 +12,5 @@
 }
 
 ***REMOVED***
-const app = ***REMOVED***
+***REMOVED***
 ***REMOVED***
