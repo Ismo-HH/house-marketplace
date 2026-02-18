@@ -1,9 +1,23 @@
-import { Link } from 'react-router-dom'
-import Slider from '../components/Slider'
-import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
-import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg'
+import React, { useState, useCallback, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
+import Slider from '../components/Slider.jsx';
+import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg';
+import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg';
 
 function Explore() {
+  const [count, setCount] = useState( 0 );
+
+  const handleClick = useCallback((event) => {
+    console.log('Toiminto(X,Y): (' + event.pageX + ', ' + event.pageY + ')');
+    setCount((count) => count + 1);
+  }, []);
+
+
+  useEffect(() => {  
+    console.log('Viesti useEfect funktiosta');
+  }, []);
+
   return (
     <div className='explore'>
       <header>

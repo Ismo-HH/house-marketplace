@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { getAuth, updateProfile } from 'firebase/auth'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
+import { getAuth, updateProfile } from 'firebase/auth';
 import {
   updateDoc,
   doc,
@@ -10,13 +11,13 @@ import {
   where,
   orderBy,
   deleteDoc,
-} from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import ListingItem from '../components/ListingItem'
-import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
-import homeIcon from '../assets/svg/homeIcon.svg'
+} from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import ListingItem from '../components/ListingItem.jsx';
+import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg';
+import homeIcon from '../assets/svg/homeIcon.svg';
 
 function Profile() {
   const auth = getAuth()

@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import { toast } from 'react-toastify'
-import { Link, useNavigate } from 'react-router-dom'
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import OAuth from '../components/OAuth'
-import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../assets/svg/visibilityIcon.svg'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { toast } from 'react-toastify';
+import { Link, useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import OAuth from '../components/OAuth.jsx';
+import arrowRightIcon from '../assets/svg/keyboardArrowRightIcon.svg';
+import visibilityIcon from '../assets/svg/visibilityIcon.svg';
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false)
@@ -85,7 +86,7 @@ function SignIn() {
           <div className='signInBar'>
             <p className='signInText'>Sign In</p>
             <button className='signInButton'>
-              <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
+              <img src={arrowRightIcon} fill='#ffffff' width='34px' height='34px' />
             </button>
           </div>
         </form>

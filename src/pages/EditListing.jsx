@@ -1,20 +1,19 @@
-import { useState, useEffect, useRef } from 'react'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import React, { useState, useEffect, useRef } from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import {
   getStorage,
   ref,
   uploadBytesResumable,
   getDownloadURL,
-} from 'firebase/storage'
-import { doc, updateDoc, getDoc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { useNavigate, useParams } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { v4 as uuidv4 } from 'uuid'
-import Spinner from '../components/Spinner'
+} from 'firebase/storage';
+import { doc, updateDoc, getDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { v4 as uuidv4 } from 'uuid';
+import Spinner from '../components/Spinner.jsx';
 
 function EditListing() {
-  // eslint-disable-next-line
   const [geolocationEnabled, setGeolocationEnabled] = useState(true)
   const [loading, setLoading] = useState(false)
   const [listing, setListing] = useState(false)
@@ -97,7 +96,6 @@ function EditListing() {
     return () => {
       isMounted.current = false
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted])
 
   const onSubmit = async (e) => {
@@ -145,7 +143,7 @@ function EditListing() {
       geolocation.lng = longitude
     }
 
-    // Store image in firebase
+    /* Store image in firebase
     const storeImage = async (image) => {
       return new Promise((resolve, reject) => {
         const storage = getStorage()
@@ -193,7 +191,7 @@ function EditListing() {
       toast.error('Images not uploaded')
       return
     })
-
+    */
     const formDataCopy = {
       ...formData,
       imgUrls,
@@ -462,14 +460,14 @@ function EditListing() {
 
           <label className='formLabel'>Images</label>
           <p className='imagesInfo'>
-            The first image will be the cover (max 6).
+            The first image will be the cover (max 2).
           </p>
           <input
             className='formInputFile'
             type='file'
             id='images'
             onChange={onMutate}
-            max='6'
+            max='2'
             accept='.jpg,.png,.jpeg'
             multiple
             required
