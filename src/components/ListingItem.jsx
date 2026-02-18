@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
-import { ReactComponent as DeleteIcon } from '../assets/svg/deleteIcon.svg'
-import { ReactComponent as EditIcon } from '../assets/svg/editIcon.svg'
-import bedIcon from '../assets/svg/bedIcon.svg'
-import bathtubIcon from '../assets/svg/bathtubIcon.svg'
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import editIcon from '../assets/svg/editIcon.svg';
+import deleteIcon from '../assets/svg/deleteIcon.svg';
+import bedIcon from '../assets/svg/bedIcon.svg';
+import bathtubIcon from '../assets/svg/bathtubIcon.svg';
 
 function ListingItem({ listing, id, onEdit, onDelete }) {
   return (
@@ -49,14 +50,14 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
       </Link>
 
       {onDelete && (
-        <DeleteIcon
+        <img src={deleteIcon}
           className='removeIcon'
           fill='rgb(231, 76,60)'
           onClick={() => onDelete(listing.id, listing.name)}
         />
       )}
 
-      {onEdit && <EditIcon className='editIcon' onClick={() => onEdit(id)} />}
+      {onEdit && <img src={editIcon} className='editIcon' onClick={() => onEdit(id)} />}
     </li>
   )
 }

@@ -1,20 +1,19 @@
-import { useState, useEffect, useRef } from 'react'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import React, { useState, useEffect, useRef } from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import {
   getStorage,
   ref,
   uploadBytesResumable,
   getDownloadURL,
-} from 'firebase/storage'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { v4 as uuidv4 } from 'uuid'
-import Spinner from '../components/Spinner'
+} from 'firebase/storage';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { v4 as uuidv4 } from 'uuid';
+import Spinner from '../components/Spinner.jsx';
 
 function CreateListing() {
-  // eslint-disable-next-line
   const [geolocationEnabled, setGeolocationEnabled] = useState(true)
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -67,7 +66,6 @@ function CreateListing() {
     return () => {
       isMounted.current = false
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted])
 
   const onSubmit = async (e) => {
@@ -81,9 +79,9 @@ function CreateListing() {
       return
     }
 
-    if (images.length > 6) {
+    if (images.length > 2) {
       setLoading(false)
-      toast.error('Max 6 images')
+      toast.error('Max 2 images')
       return
     }
 
@@ -92,19 +90,20 @@ function CreateListing() {
 
     if (geolocationEnabled) {
       const response = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAGu7NcAnw_XFGI9mCBReLytUENaIilGQ4`
       )
-
       const data = await response.json()
-
+      
       geolocation.lat = data.results[0]?.geometry.location.lat ?? 0
       geolocation.lng = data.results[0]?.geometry.location.lng ?? 0
-
+      const env_var = process.env;
+      console.log('geolocation latitude ' + geolocation.lat);
+      console.log('API key ' + process.env.REACT_APP_GEOCODE_API_KEY);
       location =
         data.status === 'ZERO_RESULTS'
           ? undefined
           : data.results[0]?.formatted_address
-
+      
       if (location === undefined || location.includes('undefined')) {
         setLoading(false)
         toast.error('Please enter a correct address')
@@ -115,7 +114,7 @@ function CreateListing() {
       geolocation.lng = longitude
     }
 
-    // Store image in firebase
+    /* Store image in firebase
     const storeImage = async (image) => {
       return new Promise((resolve, reject) => {
         const storage = getStorage()
@@ -163,10 +162,10 @@ function CreateListing() {
       toast.error('Images not uploaded')
       return
     })
-
+    */
     const formDataCopy = {
       ...formData,
-      imgUrls,
+      //imgUrls,
       geolocation,
       timestamp: serverTimestamp(),
     }
@@ -430,7 +429,7 @@ function CreateListing() {
 
           <label className='formLabel'>Images</label>
           <p className='imagesInfo'>
-            The first image will be the cover (max 6).
+            The first image will be the cover (max 2).
           </p>
           <input
             className='formInputFile'

@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import {
   collection,
   getDocs,
@@ -7,11 +8,11 @@ import {
   orderBy,
   limit,
   startAfter,
-} from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { toast } from 'react-toastify'
-import Spinner from '../components/Spinner'
-import ListingItem from '../components/ListingItem'
+} from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import { toast } from 'react-toastify';
+import Spinner from '../components/Spinner.jsx';
+import ListingItem from '../components/ListingItem.jsx';
 
 function Offers() {
   const [listings, setListings] = useState(null)
@@ -23,23 +24,23 @@ function Offers() {
       try {
         // Get reference
         const listingsRef = collection(db, 'listings')
-
+        console.log('Viesti useEfect 1');
         // Create a query
         const q = query(
           listingsRef,
-          where('offer', '==', true),
+          //where('offer', '==', true),
           orderBy('timestamp', 'desc'),
           limit(10)
         )
-
+        console.log('Viesti useEfect 2');
         // Execute query
         const querySnap = await getDocs(q)
-
+        console.log('Viesti useEfect 3');
         const lastVisible = querySnap.docs[querySnap.docs.length - 1]
         setLastFetchedListing(lastVisible)
-
+        console.log('Viesti useEfect 4');
         const listings = []
-
+        console.log('Viesti useEfect 5');
         querySnap.forEach((doc) => {
           return listings.push({
             id: doc.id,

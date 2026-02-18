@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { useParams } from 'react-router-dom';
 import {
   collection,
   getDocs,
@@ -8,11 +9,11 @@ import {
   orderBy,
   limit,
   startAfter,
-} from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { toast } from 'react-toastify'
-import Spinner from '../components/Spinner'
-import ListingItem from '../components/ListingItem'
+} from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import { toast } from 'react-toastify';
+import Spinner from '../components/Spinner.jsx';
+import ListingItem from '../components/ListingItem.jsx';
 
 function Category() {
   const [listings, setListings] = useState(null)

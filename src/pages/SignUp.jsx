@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
-} from 'firebase/auth'
-import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase.config'
-import OAuth from '../components/OAuth'
-import { ReactComponent as ArrowRightIcon } from '../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../assets/svg/visibilityIcon.svg'
+} from 'firebase/auth';
+import { setDoc, doc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase.config.js';
+import OAuth from '../components/OAuth.jsx';
+import arrowRightIcon from '../assets/svg/keyboardArrowRightIcon.svg';
+import visibilityIcon from '../assets/svg/visibilityIcon.svg';
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
@@ -110,7 +111,7 @@ function SignUp() {
           <div className='signUpBar'>
             <p className='signUpText'>Sign Up</p>
             <button className='signUpButton'>
-              <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
+              <img src={arrowRightIcon} fill='#ffffff' width='34px' height='34px' />
             </button>
           </div>
         </form>
