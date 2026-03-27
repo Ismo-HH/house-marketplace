@@ -18,7 +18,7 @@ Sovellus on toteutettu modernilla web-teknologialla:
 * **Backend / palvelut:** Firebase (Authentication, Firestore, Storage)
 * **UI:** usein Tailwind CSS tai muu CSS-ratkaisu
 
-Firebase toimii palveluna (BaaS), joten erillistä omaa backend-palvelinta ei tarvitse rakentaa. ([GitHub][1])
+Firebase toimii palveluna (BaaS), joten erillistä omaa backend-palvelinta ei tarvitse rakentaa.
 
 ---
 
@@ -52,7 +52,7 @@ house-marketplace/
 #### 2. Firebase Authentication
 
 * Käyttäjien rekisteröinti ja kirjautuminen
-* Tukee mm. sähköposti + salasana ja Google login ([GitHub][1])
+* Tukee mm. sähköposti + salasana ja Google login
 
 #### 3. Firestore (tietokanta)
 
@@ -160,7 +160,7 @@ Tai:
 NEXT_PUBLIC_GEOCODE_KEY=YOUR_API_KEY
 ```
 
-Tämä liittyy kartta- ja geokoodausominaisuuksiin. ([GitHub][2])
+Tämä liittyy kartta- ja geokoodausominaisuuksiin.
 
 ---
 
@@ -221,9 +221,4 @@ Sovellus on helppo ajaa paikallisesti, koska:
 
 ## 📚 Lähteet
 
-* GitHub House Marketplace (React + Firebase) ([GitHub][2])
-
----
-
-[1]: https://github.com/thefinethread/house-marketplace?utm_source=chatgpt.com "House Marketplace App built with React and Firebase"
-[2]: https://github.com/bradtraversy/house-marketplace?utm_source=chatgpt.com "bradtraversy/house-marketplace"
+* GitHub House Marketplace (React + Firebase) ([Alkuperäinen House Marketplace][https://github.com/bradtraversy/house-marketplace])
