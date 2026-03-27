@@ -140,16 +140,13 @@ export default app;
 Suositeltavampaa olisi laittaa muuttujat ympäristömuuttujaksi:
 
 ```
+REACT_APP_FIREBASE_API_KEY=YOUR_API_KEY
+REACT_APP_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+REACT_APP_FIREBASE_BUCKET=YOUR_BUCKET_ID
 REACT_APP_GEOCODE_API_KEY=YOUR_API_KEY
 ```
 
-Tai:
-
-```
-NEXT_PUBLIC_GEOCODE_KEY=YOUR_API_KEY
-```
-
-Tämä liittyy kartta- ja geokoodausominaisuuksiin.
+Nämä avaimet liittyvät kohteen tietojen tallentamiseen ja karttaominaisuuksiin.
 
 
 ### 6. Sovelluksen käynnistys
