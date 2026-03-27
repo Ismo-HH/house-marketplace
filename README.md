@@ -12,11 +12,10 @@ Find and list houses for sale or for rent. This is forked from [Brad Traversy](h
 * ottaa yhteyttä ilmoituksen jättäjään
 * hallita omaa käyttäjäprofiilia
 
-Sovellus on toteutettu modernilla web-teknologialla:
+Sovellus on toteutettu seuraavilla web-teknologioilla:
 
 * **Frontend:** React
 * **Backend / palvelut:** Firebase (Authentication, Firestore, Storage)
-* **UI:** usein Tailwind CSS tai muu CSS-ratkaisu
 
 Firebase toimii palveluna (BaaS), joten erillistä omaa backend-palvelinta ei tarvitse rakentaa.
 
@@ -52,15 +51,14 @@ house-marketplace/
 #### 2. Firebase Authentication
 
 * Käyttäjien rekisteröinti ja kirjautuminen
-* Tukee mm. sähköposti + salasana ja Google login
+* Kirjautumisvaihtoehtoja ovat sähköposti + salasana tai Google login
 
 #### 3. Firestore (tietokanta)
 
 * Tallentaa:
 
-  * käyttäjätiedot
-  * asuntolistaukset
-* Reaaliaikainen tietokanta
+* käyttäjätiedot
+* asuntolistaukset
 
 #### 4. Firebase Storage
 
@@ -80,7 +78,7 @@ house-marketplace/
 
 Varmista, että sinulla on asennettuna:
 
-* Node.js (suositus: v16+)
+* Node.js (suositus: v24+)
 * npm (tulee Node.js:n mukana)
 * Git
 
@@ -88,7 +86,7 @@ Varmista, että sinulla on asennettuna:
 
 ### 2. Projektin kloonaus
 
-Avaa terminaali ja suorita:
+Avaa komentokehote ja suorita:
 
 ```bash
 git clone https://github.com/Ismo-HH/house-marketplace.git
@@ -148,7 +146,7 @@ export default app;
 
 ### 5. (Valinnainen) .env-tiedosto
 
-Joissakin versioissa tarvitaan ympäristömuuttujia:
+Suositeltavampaa olisi laittaa muuttujat ympäristömuuttujaksi:
 
 ```
 REACT_APP_GEOCODE_API_KEY=YOUR_API_KEY
