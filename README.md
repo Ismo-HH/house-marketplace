@@ -19,7 +19,6 @@ Sovellus on toteutettu seuraavilla web-teknologioilla:
 
 Firebase toimii palveluna (BaaS), joten erillistä omaa backend-palvelinta ei tarvitse rakentaa.
 
----
 
 ## 🧱 Ohjelman rakenne
 
@@ -70,8 +69,6 @@ house-marketplace/
 * Kuvakaruselli (Swiper)
 * Ilmoitukset (Toastify)
 
----
-
 ## ⚙️ Asennus ja käynnistys omalla koneella
 
 ### 1. Vaatimukset
@@ -82,8 +79,6 @@ Varmista, että sinulla on asennettuna:
 * npm (tulee Node.js:n mukana)
 * Git
 
----
-
 ### 2. Projektin kloonaus
 
 Avaa komentokehote ja suorita:
@@ -92,8 +87,6 @@ Avaa komentokehote ja suorita:
 git clone https://github.com/Ismo-HH/house-marketplace.git
 cd house-marketplace
 ```
-
----
 
 ### 3. Riippuvuuksien asennus
 
@@ -105,7 +98,6 @@ npm install
 
 Tämä asentaa kaikki `package.json`-tiedostossa määritellyt kirjastot.
 
----
 
 ### 4. Firebase-konfiguraatio
 
@@ -142,7 +134,6 @@ const app = initializeApp(firebaseConfig);
 export default app;
 ```
 
----
 
 ### 5. (Valinnainen) .env-tiedosto
 
@@ -160,7 +151,6 @@ NEXT_PUBLIC_GEOCODE_KEY=YOUR_API_KEY
 
 Tämä liittyy kartta- ja geokoodausominaisuuksiin.
 
----
 
 ### 6. Sovelluksen käynnistys
 
@@ -176,8 +166,6 @@ Tai joissakin projekteissa:
 npm run dev
 ```
 
----
-
 ### 7. Sovelluksen avaaminen selaimessa
 
 Avaa selaimessa:
@@ -188,8 +176,6 @@ http://localhost:3000
 
 Jos kaikki toimii oikein, näet sovelluksen etusivun.
 
----
-
 ## 🔄 Sovelluksen käyttö
 
 Kun sovellus on käynnissä:
@@ -199,8 +185,6 @@ Kun sovellus on käynnissä:
 3. Lisää uusi asuntolistaus
 4. Selaa muiden käyttäjien ilmoituksia
 5. Muokkaa omaa profiilia
-
----
 
 ## 🚀 Yhteenveto
 
@@ -220,3 +204,4 @@ Sovellus on helppo ajaa paikallisesti, koska:
 ## 📚 Lähteet
 
 * GitHub House Marketplace (React + Firebase) [Alkuperäinen House Marketplace](https://github.com/bradtraversy/house-marketplace)
+* Tämän dokumentin tuottamisessa on hyödynnetty ChatGPT-tekoälyä (OpenAI). Sisältöä on muokattu [kirjoittajan](https://github.com/Ismo-HH) toimesta.
