@@ -4,7 +4,7 @@ Find and list houses for sale or for rent. This is forked from [Brad Traversy](h
 
 ## 📌 Yleiskuvaus
 
-**House Marketplace** on web-sovellus, jonka tarkoituksena on toimia opintojakson Pilvipalvelut web-kehityksessä  asuntojen selaaminen, lisääminen ja hallinta. Sovellus toimii markkinapaikkana, jossa käyttäjät voivat:
+**House Marketplace** on web-sovellus, jonka tarkoituksena on toimia opintojakson Pilvipalvelut web-kehityksessä harjoitustyömallina. Sovelluksessa perustoimintoina ovat asuntojen selaaminen, lisääminen ja muokkaus, erityisesti sovelluksessa voi:
 
 * selata myytäviä ja vuokrattavia asuntoja
 * lisätä omia ilmoituksia
