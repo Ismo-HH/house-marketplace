@@ -219,4 +219,4 @@ Sovellus on helppo ajaa paikallisesti, koska:
 
 ## 📚 Lähteet
 
-* GitHub House Marketplace (React + Firebase) ([Alkuperäinen House Marketplace][https://github.com/bradtraversy/house-marketplace])
+* GitHub House Marketplace (React + Firebase) [Alkuperäinen House Marketplace](https://github.com/bradtraversy/house-marketplace)
