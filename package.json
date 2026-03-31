@@ -2,6 +2,7 @@
   "name": "house-marketplace",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://[Your_GitHub_Account].github.io/house-marketplace",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
@@ -36,7 +37,7 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
