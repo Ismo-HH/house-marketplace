@@ -52,5 +52,5 @@ module.exports = {
     compress: false,
     hot: true,
     port: 3000,
-  },
-***REMOVED***
+  }
+}
