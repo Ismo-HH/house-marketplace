@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.js';
 
 if (typeof process === 'undefined') {
-  window.process = { env: { NODE_ENV: 'development' } ***REMOVED***
+  window.process = { env: { NODE_ENV: 'development' }
 }   
 const rootElement = document.getElementById("app");
 const root = createRoot(rootElement);
