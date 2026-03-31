@@ -20,20 +20,12 @@ import './assets/App.css';
 class App extends Component {
   state = {
     theme: "light",
-<<<<<<< HEAD
-  ***REMOVED***
-=======
-  ***REMOVED***
->>>>>>> 0eac993b6b7e6cac71d57b8c57037b822737f4d0
+  };
   toggleTheme = () => {
     this.setState(({ theme }) => ({
       theme: theme === "light" ? "dark" : "light",
     }));
-<<<<<<< HEAD
-  ***REMOVED***
-=======
-  ***REMOVED***
->>>>>>> 0eac993b6b7e6cac71d57b8c57037b822737f4d0
+  };
 
   
   render() {
